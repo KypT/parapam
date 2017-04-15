@@ -1,8 +1,30 @@
 <!DOCTYPE html>
-<head>
-</head>
-<body>
-  <script src="resources/incremental-dom-min.js"></script>
-  <script src="resources/jsonml2idom.js"></script>
-  <script src="main.js"></script>
-</body>
+<html class="mdl-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="resources/material.min.css">
+  </head>
+  <body>
+      <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+          <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">R7 Console</span>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">Services</span>
+          <nav class="mdl-navigation" id="services-list">
+    <!--         <a class="mdl-navigation__link" href="">Link</a> -->
+          </nav>
+        </div>
+        <main class="mdl-layout__content">
+<!--           <div id="body"></div> -->
+        </main>
+      </div>
+    <script src="resources/material.min.js"></script>
+    <script src="resources/incremental-dom-min.js"></script>
+    <script src="resources/jsonml2idom.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

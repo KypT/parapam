@@ -4,7 +4,7 @@
 
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.225"]
-                 [com.etagi/tardis "0.1.0"]
+                 #_ [com.etagi/tardis "0.1.0"]
                  [aleph "0.4.3"]
                  [ring/ring-core "1.6.0-RC2"]
                  [ring/ring-jetty-adapter "1.6.0-RC2"]

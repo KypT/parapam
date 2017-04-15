@@ -34,7 +34,15 @@
   (-> my-app-routes
       ring.middleware.keyword-params/wrap-keyword-params
       ring.middleware.params/wrap-params
-      (ring.middleware.file/wrap-file "/home/kkocherov/workspace/service-swarm")))
+      (ring.middleware.file/wrap-file "/home/user/projects/parapam")))
+
+(def services
+  [{:name "LevelUp"
+    :description "description"
+    :version "1.0"
+    :instances [{:transport :http :host "10.1.9.135" :port "8090"}]
+    :methods []
+    :entities []}])
 
 (add-watch connected-uids :connected-uids
   (fn [_ _ old new]
@@ -42,8 +50,8 @@
       (println "Connected uids change: %s" new))))
 
 (def client (first (:ws @connected-uids)))
-(chsk-send! client [:asd/zz ["h1" {} "Hello world!"]])
+(chsk-send! client [:push/services services])
 
 (compile-clojurescript)
 (def server (http/start-server my-app {:port 2017}))
-(.close server)
+;; (.close server)
